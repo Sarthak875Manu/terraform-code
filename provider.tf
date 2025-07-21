@@ -6,13 +6,6 @@ terraform {
     }
   }
 
-backend "azurerm" {
-    resource_group_name = "g31-rg"
-    storage_account_name = "backendstorageterraform"                              
-    container_name       = "backend-container"                               
-    key                  = "prod.terraform.tfstate"                
-  }
-
 
 }
 
