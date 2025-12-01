@@ -6,3 +6,6 @@ jobs:
       steps:
       - name: Install Dependencies
         run: echo Hello Vivek!
+      steps:
+      - name: second task
+        run: echo Hello Sarthak!      
