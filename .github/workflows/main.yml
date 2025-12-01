@@ -1,8 +1,8 @@
 on: push
 jobs:
    my_initial_job:
-   name: My first job
-runs-on: newrunner
-   steps:
-   - name: Install Dependencies
-     run: echo Hello Vivek!
+      name: My first job
+      runs-on: newrunner
+      steps:
+      - name: Install Dependencies
+        run: echo Hello Vivek!
