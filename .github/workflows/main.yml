@@ -1,0 +1,8 @@
+on: push
+jobs: 
+  my_first_job:
+    name: Xoriant job
+    runs-on: firstrunner
+    steps: 
+      - name: Run a command
+        run:  echo first githubaction pipeline 
