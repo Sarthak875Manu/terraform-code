@@ -6,7 +6,6 @@ jobs:
       steps:
       - name: Install Dependencies
         run: echo Hello Vivek!
-jobs:
    my_second_job:
       name: My second job
       runs-on: newrunner
