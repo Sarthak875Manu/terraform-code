@@ -6,11 +6,17 @@ jobs:
       steps:
       - name: Install Dependencies
         run: echo Hello Vivek!
-   my_second_job:
-      needs: my_initial_job
-      name: My second job
-      runs-on: newrunner
-      steps:
-      - name: print
-        run: echo Hello Sarthak!
+
+      - name: Checkout
+        uses: actions/checkout@v6.0.1
+
+   
+   
+   
+   
+   
+          
+        
+   
+   
      
