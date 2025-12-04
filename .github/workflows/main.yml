@@ -1,4 +1,7 @@
 on: push
+permissions:
+  id-token: write
+  contents: read
 jobs:
    my_initial_job:
       name: My first job
