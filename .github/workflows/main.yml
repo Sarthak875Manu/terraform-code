@@ -20,6 +20,18 @@ jobs:
           tenant-id: 0866c35f-f17c-4158-9075-0be761513841
           subscription-id: 2fe6adb6-b639-4804-8d25-87b437c9cbe6
           
+      - name: Terraform Init
+        id: init
+        run: terraform init -input=false
+
+      - name: Terraform Validate
+        id: validate
+        run: terraform validate -no-color
+
+      - name: Terraform Plan
+        id: plan
+        run: terraform plan -no-color -input=false
+        continue-on-error: true
 
    
    
