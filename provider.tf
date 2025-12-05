@@ -6,6 +6,13 @@ terraform {
     }
   }
 
+backend "azurerm" {
+    resource_group_name  = "agnityrg" 
+    storage_account_name = "agnitystg"                              
+    container_name       = "tfstate"                               
+    key                  = "dev.terraform.tfstate"                
+  }
+
 
 }
 
