@@ -21,3 +21,6 @@ provider "azurerm" {
   subscription_id = "2fe6adb6-b639-4804-8d25-87b437c9cbe6"
   use_oidc = true
 }
+#ab mai chabges kr rha h feature_D branch mai
+#ab mai chabges kr rha h feature_D branch mai
+#ab mai chabges kr rha h feature_D branch mai
