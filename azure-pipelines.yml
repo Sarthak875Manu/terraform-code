@@ -1,0 +1,35 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  name: sarthak
+
+stages:
+- stage: terraform
+  jobs:
+  - job: azure login
+    steps:
+    - task: TerraformTask@5
+      displayName: Run Terraform Init
+      inputs:
+        provider: 'azurerm'
+        command: 'init'
+        workingDirectory: '$(System.DefaultWorkingDirectory)/terraform-code'
+        backendServiceArm: 'sarthak_spn'
+        backendAzureRmStorageAccountName: 'agnitystg'
+        backendAzureRmContainerName: 'tfstate'
+        backendAzureRmKey: 'gitstate.tfstate'
+  - job: terraform plan
+    steps:
+    - task: TerraformTask@5
+      displayName: Run Terraform Init
+      inputs:
+        provider: 'azurerm'
+        command: 'plan'
+        workingDirectory: '$(System.DefaultWorkingDirectory)/terraform-code'
+        environmentServiceNameAzureRM: 'sarthak_spn'
