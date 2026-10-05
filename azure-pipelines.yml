@@ -12,7 +12,7 @@ pool:
 stages:
 - stage: terraform
   jobs:
-  - job: azure login
+  - job: azure_login
     steps:
     - task: TerraformTask@5
       displayName: Run Terraform Init
@@ -24,7 +24,7 @@ stages:
         backendAzureRmStorageAccountName: 'agnitystg'
         backendAzureRmContainerName: 'tfstate'
         backendAzureRmKey: 'gitstate.tfstate'
-  - job: terraform plan
+  - job: terraform_plan
     steps:
     - task: TerraformTask@5
       displayName: Run Terraform Init
